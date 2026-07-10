@@ -194,13 +194,32 @@ html {
     .hero_titulo{
         font-size: 2rem;
     }
-    .sobre_conteudo{
+    .hero_titulo{
+        font-size: 2rem;
+    }
+    #sobre_conteudo{
+        text-align: center;
+    }
+    .cardapio_grade{
         flex-direction: column;
     }
-    .sobre_texto .sobre_titulo {
+    #sobre_texto {
         text-align: center;
     }
     .contato__conteudo{
         flex-direction: column;
+        text-align: center;
     }
+    .contato_bloco .secao_titulo{
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .secao_titulo{
+        font-size: 2rem;
+    }
+}
+}
+@media (max-width: 853.98px) {
+    .sobre_conteudo
+    flex-direction: column;
 }
