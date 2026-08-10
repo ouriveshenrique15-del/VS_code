@@ -1,14 +1,14 @@
-* {
+ {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Playfair Display'
 }
-
+ 
 header {
     color: var(--branco);
 }
-
+ 
 :root {
     --cafe-escuro: #4b2e2e;
     --creme: #f5ede1;
@@ -16,14 +16,14 @@ header {
     --texto: #2e2117;
     --branco: #ffffff;
 }
-
+ 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
 background-color: var(--creme);
     color: var(--texto);
-
+ 
 }
-
+ 
 .menu_lista {
     padding: 0.6rem 0;
     display: flex;
@@ -48,12 +48,12 @@ background-color: var(--creme);
 .card_preco {
     color: var(--laranja);
 }
-
+ 
 .logo img{
     width: 45px;
     height: 45px;
 }
-
+ 
 .logo h3{
     font-size: 1.5rem;
     font-weight: bold;
@@ -64,16 +64,16 @@ background-color: var(--creme);
     gap: 10px;
     color: white;
 }
-
+ 
 .menu_lista a {
     color: var(--creme);
     text-decoration: none;
 }
-
+ 
 .menu_lista a:hover {
     color: var(--laranja);
 }
-
+ 
 .hero {
     background: linear-gradient(rgba(75, 46, 46, 0.65), rgba(75, 46, 46, 0.65)), url('http://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=1200&q=80');
     background-size: cover;
@@ -108,7 +108,7 @@ background-color: var(--creme);
 .contato__conteudo h2 {
     margin-bottom: 0.5rem
 }
-
+ 
 .cards {
     display: flex;
     justify-content: center;
@@ -116,7 +116,15 @@ background-color: var(--creme);
     gap: 30px;
     margin-top: 30px;
 }
-
+ 
+/* Grade do cardápio - cards lado a lado */
+.cardapio__grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+ 
 .card {
     width: 250px;
     padding: 35px 25px;
@@ -128,14 +136,14 @@ background-color: var(--creme);
 .card_titulo {
     color: var(--cafe-escuro);
     margin: 0.5rem;
-
+ 
 }
-
+ 
 .card_descricao {
     font-size: 0.95rem;
     margin-bottom: 1rem;
 }
-
+ 
 .card_preco {
     color: var(--laranja);
     display: block;
@@ -162,7 +170,7 @@ html {
 .sobre_conteudo img {
     border-radius: 20px;
 }
-
+ 
 .cardapio {
     padding: 30px 0;
     background: var(--branco);
@@ -172,7 +180,7 @@ html {
 .contato {
     padding: 4rem 2rem;
     background-color: var(--creme);
-
+ 
 }
 .hero_titulo {
     padding: 2rem ;
@@ -183,43 +191,42 @@ html {
     background-color: var(--cafe-escuro);
     color: var(--creme);
 }
-
-@media(max-wisth: 768px){
-    .menu{
+ 
+@media (max-width: 768px) {
+    .menu {
         flex-direction: column;
         gap: 1rem;
     }
-    .menu_lista{
-    gap:1rem;
-    .hero_titulo{
+    .menu_lista {
+        gap: 1rem;
+    }
+    .hero_titulo {
         font-size: 2rem;
     }
-    .hero_titulo{
-        font-size: 2rem;
-    }
-    #sobre_conteudo{
+    #sobre_conteudo {
         text-align: center;
     }
-    .cardapio_grade{
-        flex-direction: column;
+    .cardapio__grade {
+        grid-template-columns: 1fr;
     }
     #sobre_texto {
         text-align: center;
     }
-    .contato__conteudo{
+    .contato__conteudo {
         flex-direction: column;
         text-align: center;
     }
-    .contato_bloco .secao_titulo{
+    .contato_bloco .secao_titulo {
         text-align: center;
         margin-bottom: 2rem;
     }
-    .secao_titulo{
+    .secao_titulo {
         font-size: 2rem;
     }
 }
-}
+ 
 @media (max-width: 853.98px) {
-    .sobre_conteudo
-    flex-direction: column;
+    .sobre_conteudo {
+        flex-direction: column;
+    }
 }
